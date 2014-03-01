@@ -30,11 +30,11 @@
 
 - name: Create entity
   uri: url=http://localhost:3000/yourapp/yourentities method=POST
-       body='{"myattr":"mymessage"}' HEADER_Content-Type="application/json"
+       body='{"myattr":"mymessage"}' HEADER_Content-Type="application/json" status_code=201
 
 - name: Create entity with empty id (simulating AngularJS behavior)
   uri: url=http://localhost:3000/yourapp/yourentities method=POST
-       body='{"id":"", "myattr":"mymessage"}' HEADER_Content-Type="application/json"
+       body='{"id":"", "myattr":"mymessage"}' HEADER_Content-Type="application/json" status_code=201
 
 - name: Update entity
   uri: url=http://localhost:3000/yourapp/yourentities/2 method=PUT
